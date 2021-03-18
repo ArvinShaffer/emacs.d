@@ -171,7 +171,9 @@
   (garbage-collect))
 
 (run-with-idle-timer 4 nil #'my-cleanup-gc)
-
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+(package-initialize)
+(require-package 'auctex)
 
 ;;; Local Variables:
 ;;; no-byte-compile: t
