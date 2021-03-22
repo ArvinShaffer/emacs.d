@@ -16,7 +16,7 @@
 (setq *win64* (eq system-type 'windows-nt))
 (setq *cygwin* (eq system-type 'cygwin) )
 (setq *linux* (or (eq system-type 'gnu/linux) (eq system-type 'linux)) )
-(setq *unix* (or *linux* (eq system-type 'usg-unix-v) (eq system-type 'berkeley-unix)) )
+(setq *unix* (or  (eq system-type 'usg-unix-v) (eq system-type 'berkeley-unix)) )
 (setq *emacs27* (>= emacs-major-version 27))
 
 ;; don't GC during startup to save time
@@ -174,6 +174,8 @@
 (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 (package-initialize)
 (require-package 'auctex)
+
+(load-theme 'light-soap t)
 
 ;;; Local Variables:
 ;;; no-byte-compile: t
